@@ -338,10 +338,10 @@
               </div>
             </div>
 
-            <hr class="half-width"><div class="accordion accordion-flush resources" id="accordionFlush12">
+            <hr class="half-width"><div class="accordion accordion-flush lesson-resources" id="accordionFlush12">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingTwelve">
-                  <button class="accordion-button collapsed" id="resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
                     RESOURCES
                   </button>
                 </h2>
@@ -361,7 +361,7 @@
                 </div>
               </div>
             </div>
-            <hr class="half-width resources"><a href="aio.html">See all in one page</a>
+            <hr class="half-width lesson-resources"><a href="aio.html">See all in one page</a>
 
 
             <hr class="d-none d-sm-block d-md-none"><div class="d-grid gap-1">
@@ -434,8 +434,7 @@ files into a single DataFrame and reshaping it using melt()</li>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="tidy-data-in-pandas">Tidy Data in Pandas<a class="anchor" aria-label="anchor" href="#tidy-data-in-pandas"></a>
-<a class="anchor" aria-label="anchor" href="#tidy-data-in-pandas"></a></h2>
+<section><h2 class="section-heading" id="tidy-data-in-pandas">Tidy Data in Pandas<a class="anchor" aria-label="anchor" href="#tidy-data-in-pandas"></a></h2>
 <hr class="half-width"><p>Let’s import the pickle file that contains all of our Chicago public
 library circulation data in a single DataFrame. We can use the Pandas
 <code>.read_pickle()</code> method to do so.</p>
@@ -695,8 +694,7 @@ which can be quite cumbersome.</p>
 <p>To address this we can reshape our data in a long format. This is
 sometimes called un-pivoting the data, and in our case the month columns
 will become a single variable in the dataset.</p>
-</section><section><h2 class="section-heading" id="tidy-data">Tidy Data<a class="anchor" aria-label="anchor" href="#tidy-data"></a>
-<a class="anchor" aria-label="anchor" href="#tidy-data"></a></h2>
+</section><section><h2 class="section-heading" id="tidy-data">Tidy Data<a class="anchor" aria-label="anchor" href="#tidy-data"></a></h2>
 <hr class="half-width"><p>Tidy data is a standard way of organizing data values within a
 dataset, making it easier to work with. Here are the key principles of
 tidy data: 1. Every column holds a single variable, like “month” or
@@ -716,8 +714,7 @@ easier. For instance, comparing monthly trends or calculating annual
 averages becomes more straightforward. - As datasets grow, tidy data
 ensures that they remain manageable and analyses remain accurate.</p>
 </div>
-</section><section><h2 class="section-heading" id="making-our-data-tidy">Making Our Data Tidy<a class="anchor" aria-label="anchor" href="#making-our-data-tidy"></a>
-<a class="anchor" aria-label="anchor" href="#making-our-data-tidy"></a></h2>
+</section><section><h2 class="section-heading" id="making-our-data-tidy">Making Our Data Tidy<a class="anchor" aria-label="anchor" href="#making-our-data-tidy"></a></h2>
 <hr class="half-width"><p>A good step towards tidying our data would be to consolidate the
 separate month columns into a column called <code>month,</code> and the
 circulation counts into another column called
@@ -1316,8 +1313,7 @@ column names in the <code>.groupby()</code> function.</p>
 </tr></tbody></table><p>
 984 rows × 2 columns
 </p>
-</section><section><h2 class="section-heading" id="adding-a-date-column">Adding a Date Column<a class="anchor" aria-label="anchor" href="#adding-a-date-column"></a>
-<a class="anchor" aria-label="anchor" href="#adding-a-date-column"></a></h2>
+</section><section><h2 class="section-heading" id="adding-a-date-column">Adding a Date Column<a class="anchor" aria-label="anchor" href="#adding-a-date-column"></a></h2>
 <hr class="half-width"><p>In order to plot this data over time in the data visualization we
 need to do three things to prepare it. First, we need to combine the
 year and month columns into its own column. Second, convert the new date
@@ -1417,8 +1413,7 @@ date.</p>
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="tidy-data-principles" class="callout-inner">
-<h3 class="callout-title">Tidy Data Principles<a class="anchor" aria-label="anchor" href="#tidy-data-principles"></a>
-</h3>
+<h3 class="callout-title">Tidy Data Principles</h3>
 <div class="callout-content">
 <p>How would you reorganize the following table about research data
 workshops to follow the three tidy data principles?</p>
@@ -1452,7 +1447,7 @@ match the content unit however you like.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <table class="table"><thead><tr class="header"><th>Year</th>
 <th>Month</th>
@@ -1499,8 +1494,7 @@ match the content unit however you like.</p>
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="subsetting-df_long" class="callout-inner">
-<h3 class="callout-title">Subsetting df_long<a class="anchor" aria-label="anchor" href="#subsetting-df_long"></a>
-</h3>
+<h3 class="callout-title">Subsetting df_long</h3>
 <div class="callout-content">
 <p>Using df_long, create a new DataFrame, `low_circ’, that only includes
 branches with circulation numbers lower than 500 per month. When you
@@ -1522,7 +1516,7 @@ circulation is equal to 0.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1540,8 +1534,7 @@ circulation is equal to 0.</p>
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="group-and-aggregate-for-circulation-by-year" class="callout-inner">
-<h3 class="callout-title">Group and aggregate for circulation by year<a class="anchor" aria-label="anchor" href="#group-and-aggregate-for-circulation-by-year"></a>
-</h3>
+<h3 class="callout-title">Group and aggregate for circulation by year</h3>
 <div class="callout-content">
 <p>How would you create a subset of <code>df_long</code> that sums up
 the circulation by year across all branches? In other words you want a
@@ -1556,7 +1549,7 @@ for all branches in each year.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1598,8 +1591,7 @@ for all branches in each year.</p>
 <i class="callout-icon" data-feather="key"></i>
 </div>
 <div class="callout-inner">
-<h3 class="callout-title">Key Points<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
-</h3>
+<h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul><li>In tidy data each variable forms a column, each observation forms a
 row, and each type of observational unit forms a table.</li>
@@ -1644,7 +1636,7 @@ for preparing data for analysis.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.5" class="external-link">sandpaper (0.16.5)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.6" class="external-link">pegboard (0.7.6)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.3" class="external-link">varnish (1.0.3)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.6" class="external-link">sandpaper (0.16.6)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.6" class="external-link">pegboard (0.7.6)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.4" class="external-link">varnish (1.0.4)</a></p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -1667,7 +1659,7 @@ for preparing data for analysis.</li>
   "identifier": "https://librarycarpentry.github.io/lc-python-intro/tidy.html",
   "dateCreated": "2018-04-12",
   "dateModified": "2024-06-27",
-  "datePublished": "2024-08-20"
+  "datePublished": "2024-08-27"
 }
 
   </script><script>
